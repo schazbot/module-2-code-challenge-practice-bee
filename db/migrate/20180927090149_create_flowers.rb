@@ -3,7 +3,6 @@ class CreateFlowers < ActiveRecord::Migration[5.2]
     create_table :flowers do |t|
       t.string :name
       t.string :pollen_capacity
-      t.string :integer
 
       t.timestamps
     end
