@@ -1,0 +1,14 @@
+<ul>
+
+  <%@bees.each do |bee|%>
+    <li>
+      <%=link_to bee.name, edit_bee_path(bee) %>
+    </li>
+  <%end %>
+</ul>
+<div class="">
+<%= link_to 'Make new Bee', new_bee_path %>
+</div>
+<div>
+<%= link_to 'Link to all Flowers', flowers_path %>
+</div>

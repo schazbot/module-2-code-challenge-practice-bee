@@ -1,0 +1,17 @@
+<h2> <%= @flower.name %> </h2>
+
+<h4>Pollen Capacity</h4>
+  <%= @flower.pollen_capacity %>
+
+<p>Bees</p>
+
+  <% @flower.bees.each do |bee| %>
+<li>
+  <%=bee.name %>
+</li>
+  <% end %>
+<br>
+<br>
+<div>
+<%=link_to "Back to all Bees", bees_path %>
+</div>

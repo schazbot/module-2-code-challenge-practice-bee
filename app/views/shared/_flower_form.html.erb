@@ -1,0 +1,25 @@
+<h2>Flowers!</h2>
+<p>
+<div>
+<%= form_for @flower do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+</div>
+<br>
+<div>
+<%= f.label :pollen_capacity %>
+<%= f.number_field :pollen_capacity%>
+</div>
+<br>
+<div class="">
+  <%= f.label :bee_ids %>
+  <br>
+  <%= f.collection_check_boxes :bee_ids, Bee.all, :id, :name%>
+</div>
+<br>
+<%= f.submit %>
+<% end %>
+<div class="">
+<%=link_to "Back to all Flowers", flowers_path %>
+</div>

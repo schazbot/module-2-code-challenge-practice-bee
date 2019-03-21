@@ -1,0 +1,14 @@
+<h2>Bees!<%= @bee.name %> </h2>
+<p>
+<%= form_for @bee do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :queen %>
+<%= f.check_box :queen %>
+<%=f.collection_select :hive_id, Hive.all, :id, :name %>
+<%= f.submit %>
+<% end %>
+</p>
+<div class="">
+<%=link_to "Back to all Bees", bees_path %>
+</div>
